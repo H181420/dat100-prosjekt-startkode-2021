@@ -23,8 +23,9 @@ public class KortSamling {
 	public KortSamling() {
 		
 		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.constructor("KortSamling"));
+		samling = new Kort [MAKS_KORT];
+		antall = 0;
+		//throw new UnsupportedOperationException(TODO.constructor("KortSamling"));
 		// TODO - END
 	}
 
@@ -50,9 +51,9 @@ public class KortSamling {
 	 */
 	public int getAntalKort() {
 		
-		// TODO - START
+		return antall; 
 		
-		throw new UnsupportedOperationException(TODO.method());
+		//throw new UnsupportedOperationException(TODO.method());
 		
 		// TODO - END
 	}
