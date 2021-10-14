@@ -67,7 +67,8 @@ public class KortSamling {
 	 */
 	public boolean erTom() {
 		
-		// TODO - START
+		boolean erTom; 
+			
 				
 		throw new UnsupportedOperationException(TODO.method());
 		
@@ -78,7 +79,7 @@ public class KortSamling {
 	 * Legg et kort til samlinga.
 	 * 
 	 * @param kort
-	 *            er kortet som skal leggast til.
+	 *            er kortet som skal leggast til..
 	 */
 	public void leggTil(Kort kort) {
 		
