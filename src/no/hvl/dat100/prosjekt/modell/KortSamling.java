@@ -65,7 +65,7 @@ public class KortSamling {
 	 */
 	public boolean erTom() {
 		
-		// TODO - START
+		boolean erTom; 
 			
 				
 		throw new UnsupportedOperationException(TODO.method());
