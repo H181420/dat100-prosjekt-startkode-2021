@@ -12,6 +12,7 @@ import no.hvl.dat100.prosjekt.kontroll.dommer.Regler;
  */
 
 // teste push//
+//hallo//
 public class KortSamling {
 
 	private final int MAKS_KORT = 4 * Regler.MAKS_KORT_FARGE;
