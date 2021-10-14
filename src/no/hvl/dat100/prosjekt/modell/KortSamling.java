@@ -66,6 +66,11 @@ public class KortSamling {
 	public boolean erTom() {
 		
 		boolean erTom; 
+		int i = 0; 
+		
+		while (i < samling.length) {
+			if (samling[i] != samling.length)
+		}
 			
 				
 		throw new UnsupportedOperationException(TODO.method());
