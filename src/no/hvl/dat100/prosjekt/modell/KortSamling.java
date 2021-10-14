@@ -36,7 +36,7 @@ public class KortSamling {
 	 * først og fremst ment å brukes i testklasser. Om man trenger
 	 * kortene utenfor, anbefales metoden getAlleKort().
 	 * 
-	 * @return tabell av kort.-
+	 * @return tabell av kort.-.
 	 */
 	public Kort[] getSamling() {
 		
