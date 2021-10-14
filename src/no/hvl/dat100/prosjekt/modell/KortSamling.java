@@ -65,15 +65,20 @@ public class KortSamling {
 	 */
 	public boolean erTom() {
 		
-		boolean erTom; 
+	boolean erTom = true;
 		int i = 0; 
 		
 		while (i < samling.length) {
-			if (samling[i] != samling.length)
+			if (samling[i] != samling[MAKS_KORT]) {
+				return erTom;
+			}
+			else 
+				i++;
+			erTom = false;
 		}
-			
+		return erTom;	
 				
-		throw new UnsupportedOperationException(TODO.method());
+		//throw new UnsupportedOperationException(TODO.method());
 		
 		// TODO - END
 	}
