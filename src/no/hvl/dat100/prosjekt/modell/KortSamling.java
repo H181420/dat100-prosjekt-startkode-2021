@@ -103,7 +103,7 @@ public class KortSamling {
 		}
 		// Husk: bruk Regler.MAKS_KORT_FARGE for å få antall kort per farge
 
-		//throw new UnsupportedOperationException(TODO.method());
+		// throw new UnsupportedOperationException(TODO.method());
 		// TODO - END
 	}
 
@@ -114,7 +114,12 @@ public class KortSamling {
 
 		// TODO - START
 
-		throw new UnsupportedOperationException(TODO.method());
+		for (int i = 0; i < antall; i++) {
+			samling[i] = null;
+
+		}
+		antall = 0;
+		// throw new UnsupportedOperationException(TODO.method());
 		// TODO - END
 	}
 
@@ -127,8 +132,9 @@ public class KortSamling {
 	public Kort seSiste() {
 
 		// TODO - START antall-1
+		return samling[antall - 1];
 
-		throw new UnsupportedOperationException(TODO.method());
+		// throw new UnsupportedOperationException(TODO.method());
 
 		// TODO - END
 
@@ -141,9 +147,13 @@ public class KortSamling {
 	 */
 	public Kort taSiste() {
 
-		// TODO - START 
+		// TODO - START
+		Kort g = samling[antall - 1];
+		samling[antall - 1] = null;
+		antall--;
+		return g;
 
-		throw new UnsupportedOperationException(TODO.method());
+		// throw new UnsupportedOperationException(TODO.method());
 
 		// TODO - END
 	}
@@ -158,8 +168,17 @@ public class KortSamling {
 	public boolean har(Kort kort) {
 
 		// TODO - START
+		boolean x = false;
+		for (int i = 0; i < antall; i++) {
+			if (samling[i].equals(kort)) {
+				x = true;
 
-		throw new UnsupportedOperationException(TODO.method());
+			}
+
+		}
+		return x;
+
+		// throw new UnsupportedOperationException(TODO.method());
 		// return false;
 		// TODO - END
 
@@ -177,8 +196,20 @@ public class KortSamling {
 	public boolean fjern(Kort kort) {
 
 		// TODO - START
+		if (har(kort)) {
+			return false;
+		} else {
+			for (int i = 0; i < antall; i++) {
+				if (samling[i].equals(kort)) {
+					samling[i] = samling[antall - 1];
+					samling[antall - 1] = null;
+					antall--;
+					return true;
 
-		throw new UnsupportedOperationException(TODO.method());
+				}
+			}
+		}
+		// throw new UnsupportedOperationException(TODO.method());
 
 		// TODO - END
 	}
@@ -187,13 +218,18 @@ public class KortSamling {
 	 * Gir kortene som en tabell av samme lengde som antall kort i samlingen
 	 * 
 	 * @return tabell av kort som er i samlingen, der kort skal ha samme rekkefølge
-	 *         som i kortsamlinga.
+	 *         som i kortsamlinga..
 	 */
 	public Kort[] getAllekort() {
 
 		// TODO - START
-
-		throw new UnsupportedOperationException(TODO.method());
+		Kort[] tabell = new Kort[antall];
+ for (int i = 0; i < antall; i++) {
+	 tabell[i] = samling[i];
+ }
+ return tabell;
+ 
+		// throw new UnsupportedOperationException(TODO.method());
 
 		// TODO - END
 
