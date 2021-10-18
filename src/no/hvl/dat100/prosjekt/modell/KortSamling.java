@@ -132,6 +132,9 @@ public class KortSamling {
 	public Kort seSiste() {
 
 		// TODO - START antall-1
+		if(erTom()) {
+			return null;
+		}
 		return samling[antall - 1];
 
 		// throw new UnsupportedOperationException(TODO.method());
@@ -148,11 +151,15 @@ public class KortSamling {
 	public Kort taSiste() {
 
 		// TODO - START
-		Kort g = samling[antall - 1];
-		samling[antall - 1] = null;
-		antall--;
-		return g;
+		if (erTom()) {
+			return null;
+		} else {
 
+			Kort g = samling[antall - 1];
+			samling[antall - 1] = null;
+			antall--;
+			return g;
+		}
 		// throw new UnsupportedOperationException(TODO.method());
 
 		// TODO - END
@@ -196,7 +203,7 @@ public class KortSamling {
 	public boolean fjern(Kort kort) {
 
 		// TODO - START
-		if (har(kort)) {
+		if (!har(kort)) {
 			return false;
 		} else {
 			for (int i = 0; i < antall; i++) {
@@ -204,10 +211,10 @@ public class KortSamling {
 					samling[i] = samling[antall - 1];
 					samling[antall - 1] = null;
 					antall--;
-					return true;
 
 				}
 			}
+			return true;
 		}
 		// throw new UnsupportedOperationException(TODO.method());
 
@@ -224,11 +231,11 @@ public class KortSamling {
 
 		// TODO - START
 		Kort[] tabell = new Kort[antall];
- for (int i = 0; i < antall; i++) {
-	 tabell[i] = samling[i];
- }
- return tabell;
- 
+		for (int i = 0; i < antall; i++) {
+			tabell[i] = samling[i];
+		}
+		return tabell;
+
 		// throw new UnsupportedOperationException(TODO.method());
 
 		// TODO - END
